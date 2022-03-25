@@ -3,7 +3,7 @@ session_start();
 
 // print_r($_SESSION["paniers"]);
 
-include 'gestionPanier.php';
+include 'GestionPanier.php';
 
 $gestionProduit = new GestionProduit();
 
