@@ -21,7 +21,7 @@ foreach($data as $value){
   <div class="card-body">
     <h5 class="card-title"><?= $value->getNom();?></h5>
     <p class="card-text"><?= $value->getPrix();?> dh</p>
-    <a href="detail de produit.php?id=<?= $value->getId();?>" class="btn btn-primary">Detail de produit</a>
+    <a href="detail-de-produit.php?id=<?= $value->getId();?>" class="btn btn-primary">Detail de produit</a>
   </div>
 </div>
 
