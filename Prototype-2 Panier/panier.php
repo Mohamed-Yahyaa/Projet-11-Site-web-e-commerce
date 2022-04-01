@@ -9,9 +9,7 @@ $gestionProduit = new GestionProduit();
 
 $listProduits = $gestionProduit->getPanier();
 
-
 ?>
-
         <table border="2" width="50%" >
              <tr>
                 <th>id</th>
@@ -37,20 +35,14 @@ $listProduits = $gestionProduit->getPanier();
                 <td><?= $value["nom"] ?></td>
                 <td><?= $value["prix"] ?> dh</td>
                 <td><?= $value["qnt"] ?></td>
-            
-              
-            </tr> 
-            
              
+            </tr> 
+                 
         <?php } ?>
-        <td><?= $total ?> </td>
-
+        <td> 🛒 <?= $total ?> </td>
 
      </table>
 
-   
+     <br>
 
-     <a href="index.php">back</a>
-
-
-     
+     <a href="index.php">Back</a>  
