@@ -51,7 +51,7 @@ class GestionProduit {
             $produit = new Produit();
             $produit->setId($value_Data['id']);
             $produit->setNom($value_Data['Nom']);
-            $produit->setPrix($value_Data['Prix']);
+            $produit->setPrix($value_Data['prix']);
            
             array_push($TableData, $produit);
         }
@@ -73,7 +73,7 @@ class GestionProduit {
                 $produit = new Produit();
                 $produit->setId($value['id']);
                 $produit->setNom($value['Nom']);
-                $produit->setPrix($value['Prix']);
+                $produit->setPrix($value['prix']);
                
                 array_push($TableData, $produit);
             }
