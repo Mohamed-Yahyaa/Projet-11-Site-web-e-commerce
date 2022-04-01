@@ -46,7 +46,7 @@ class GestionCatégorie{
     }
 
 
-    public function RechercherParId($id){
+    public function Catégorie($id){
         $SelectRowId = "SELECT * FROM catégorie WHERE id= $id";
         $result = mysqli_query($this->getConnection(),  $SelectRowId);
         // Récupère une ligne de résultat sous forme de tableau associatif

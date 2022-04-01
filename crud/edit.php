@@ -5,7 +5,7 @@ $gestionCatégorie = new GestionCatégorie();
  $catégorie = new  Catégorie();
 
 if(isset($_GET['id'])){
-    $catégorie = $gestionCatégorie->RechercherParId($_GET['id']);
+    $catégorie = $gestionCatégorie->Catégorie($_GET['id']);
 }
 
 if(isset($_POST['edit'])){
