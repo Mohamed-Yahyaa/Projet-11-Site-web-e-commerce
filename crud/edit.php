@@ -1,18 +1,18 @@
 <?php
 
-include "produitmanager.php";
-$gestionProduit = new GestionProduit();
+include "catégoriemanager.php";
+$gestionCatégorie = new GestionCatégorie();
+ $catégorie = new  Catégorie();
 
 if(isset($_GET['id'])){
-    $employe = $gestionProduit->RechercherParId($_GET['id']);
+    $catégorie = $gestionCatégorie->RechercherParId($_GET['id']);
 }
 
 if(isset($_POST['edit'])){
     $id = $_POST['id'];
     $Nom = $_POST['Nom'];
     $descriptions = $_POST['descriptions'];
-    $prix = $_POST['prix'];
-    $gestionProduit->Modifier($id,$Nom,$descriptions,$prix);
+    $gestionCatégorie->edit($id,$Nom,$descriptions);
     header('Location: index.php');
 }
 ?>
@@ -27,32 +27,27 @@ if(isset($_POST['edit'])){
 </head>
 <body>
 
-<h1>Modification de l produit : <?=$produit->getNom() ?></h1>
+
 <form method="post" action="">
     <input type="text" required="required" 
         id="id" name="id"   
-        value=<?php echo $produit->getId()?> >
+        value=<?php echo $catégorie->getId()?> >
 
     <div>
         <label for="Nom">Nom</label>
         <input type="text" required="required" 
         id="Nom" name="Nom"  placeholder="Nom" 
-        value=<?php echo $produit->getNom()?> >
+        value=<?php echo $catégorie->getNom()?> >
     </div>
     <div>
         <label for="descriptions">descriptions</label>
         <input type="text" required="required" 
         id="descriptions" name="descriptions" placeholder="descriptions"
-        value=<?php echo $produit->getdescriptions()?>>
+        value=<?php echo $catégorie->getdescriptions()?>>
     </div>
+   
     <div>
-        <label for="prix">prix</label>
-        <input type="prix" required="required"  
-        id="prix"  name="prix" placeholder="prix"
-        value=<?php echo $produit->prix()?>>
-    </div>
-    <div>
-        <input name="modifier" type="submit" value="Modifier">
+        <input name="edit" type="submit" value="edit">
         <a href="index.php">Annuler</a>
     </div>
 </form>

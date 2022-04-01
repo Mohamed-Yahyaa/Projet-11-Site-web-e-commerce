@@ -1,12 +1,12 @@
 <?php
-    include "produitmanager.php";
+    include "catégoriemanager.php";
 
 if(isset($_GET['id'])){
 
     // Trouver tous les employés depuis la base de données 
-    $gestionProduit = new GestionProduit();
+    $gestionCatégorie = new GestionCatégorie();
     $id = $_GET['id'] ;
-    $gestionProduit->delete($id);
+    $gestionCatégorie->delete($id);
 
     header('Location: index.php');
 }

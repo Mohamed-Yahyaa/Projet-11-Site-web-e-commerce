@@ -1,16 +1,15 @@
 <?php
 
-include "produitmanager.php";
+include "catégoriemanager.php";
 // Trouver tous les employés depuis la base de données 
-$gestionProduit = new GestionProduit();
+$gestionCatégorie = new GestionCatégorie();
 
 
 if(!empty($_POST)){
-    $produit = new Produit();
-    $produit->setNom($_POST['Nom']);
-    $produit->setDescriptions($_POST['descriptions']);
-    $produit->setPrix($_POST['prix']);
-    $gestionProduit->Ajouter($produit);
+    $catégorie = new Catégorie();
+    $catégorie->setNom($_POST['Nom']);
+    $catégorie->setDescriptions($_POST['descriptions']);
+    $gestionCatégorie->Ajouter($catégorie);
 
     // Redirection vers la page index.php
     header("Location: index.php");
@@ -20,7 +19,7 @@ if(!empty($_POST)){
 <form action="" method="POST">
 Nom: <input type="text" name="Nom" >
 descriptions : <input type="text" name="descriptions" >
-prix : <input type="prix"  name="prix" >
+
 
 <button type="submit">ajouter</button>
 </form>

@@ -1,12 +1,12 @@
 <?php
-      include "produitmanager.php";
+      include "catégoriemanager.php";
       
-      $gestionProduit = new GestionProduit();
-      $data = $gestionProduit->afficher();
+      $gestionCatégorie = new GestionCatégorie();
+      $data = $gestionCatégorie->afficher();
 
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>   
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,18 +19,19 @@
         <a href="ajouter.php">Add</a>
         <table>
             <tr>
+                <th>id</th>
                 <th>Nom</th>
                 <th>description</th>
-                <th>Prix</th>
+                
             </tr>
             <?php 
                    foreach($data as $value){
 
                     ?>
                     <tr>
+                       <td><?= $value->getId() ?></td>
                         <td><?= $value->getNom() ?></td>
                         <td><?= $value->getDescriptions() ?></td>
-                        <td><?= $value->getPrix() ?></td>
                         <td>
                             <a href="edit.php?id=<?php echo $value->getId() ?>">Edit</a>
                             <a href="delete.php?id=<?php echo $value->getId() ?>">Delete</a>

@@ -1,10 +1,10 @@
 <?php
 
-class Produit{
+class Catégorie{
     private $Id;
     private $Nom;
     private $Descriptions;
-    private $Prix;
+    
 
     
     public function getId() {
@@ -28,12 +28,7 @@ class Produit{
         $this->Descriptions = $Descriptions;
     }
 
-    public function getPrix() {
-        return $this->Prix;
-    }
-    public function setPrix($Prix) {
-        $this->Prix = $Prix;
-    }
+   
 
 }
      
