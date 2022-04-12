@@ -3,7 +3,6 @@ include "produit.php";
 
 
 
-
 class GestionProduit {
 
     public $name ;
