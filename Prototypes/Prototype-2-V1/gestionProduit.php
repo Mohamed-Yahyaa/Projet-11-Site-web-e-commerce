@@ -11,7 +11,7 @@ class GestionProduit {
 
     private function getConnection(){
       
-            $this->Connection = mysqli_connect('localhost', 'yousra', 'test123', 'site-e-commerce');
+            $this->Connection = mysqli_connect('localhost', 'root', '', 'e-commerce');
           
         
         
